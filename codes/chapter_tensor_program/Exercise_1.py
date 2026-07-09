@@ -11,8 +11,8 @@ c_np
 
 @tvm.script.ir_module
 class MyAdd:
-  @T.prim_func
-  def add(A: T.Buffer((4, 4), "int64"),
+    @T.prim_func
+    def add(A: T.Buffer((4, 4), "int64"),
             B: T.Buffer((4,), "int64"),
             C: T.Buffer((4, 4), "int64")):
         T.func_attr({"global_symbol": "add", "tirx.noalias": True})
